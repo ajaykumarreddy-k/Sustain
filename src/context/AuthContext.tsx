@@ -98,8 +98,15 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [session, setSession] = useState<Session | null>(null);
   const [user, setUser] = useState<AppUser | null>(null);
   const [isAuthLoading, setIsAuthLoading] = useState(true);
+  const [configError, setConfigError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!supabase) {
+      setConfigError('Supabase configuration is missing. Please check your Vercel Environment Variables or .env file (VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY).');
+      setIsAuthLoading(false);
+      return;
+    }
+
     const loadSession = async () => {
       const { data } = await supabase.auth.getSession();
       const activeSession = data.session;
@@ -195,6 +202,29 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }),
     [user, session, isAuthLoading],
   );
+
+  if (configError) {
+    return (
+      <div style={{
+        padding: '2rem',
+        textAlign: 'center',
+        fontFamily: 'system-ui, sans-serif',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: '#f8f9fa',
+        color: '#dc3545'
+      }}>
+        <h1 style={{ marginBottom: '1rem' }}>⚠️ Configuration Error</h1>
+        <p style={{ maxWidth: '400px', lineHeight: '1.5', color: '#6c757d' }}>{configError}</p>
+        <div style={{ marginTop: '2rem', fontSize: '0.875rem' }}>
+          <p>Make sure you have set the environment variables in your Vercel Dashboard.</p>
+        </div>
+      </div>
+    );
+  }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

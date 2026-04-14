@@ -73,35 +73,10 @@
             -webkit-tap-highlight-color: transparent;
         }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "framer-motion": "https://esm.sh/framer-motion@^12.26.2",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
 <link rel="stylesheet" href="/index.css">
 </head>
 <body class="font-sans antialiased overflow-hidden">
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
-<script>
-  // Register Service Worker for PWA installability
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
-        .then((registration) => {
-          console.log('[PWA] Service Worker registered with scope:', registration.scope);
-        })
-        .catch((error) => {
-          console.error('[PWA] Service Worker registration failed:', error);
-        });
-    });
-  }
-</script>
+    <script type="module" src="/index.tsx"></script>
 </body>
 </html>
