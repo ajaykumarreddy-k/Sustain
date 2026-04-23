@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Nunito:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+
+  --color-sustain-bg: #FDFCF8;
+  --color-sustain-card: #FEFEFA;
+  --color-sustain-text: #2C2C24;
+  --color-sustain-muted: #78786C;
+  --color-sustain-moss: #5D7052;
+  --color-sustain-pale: #F3F4F1;
+  --color-sustain-clay: #C18C5D;
+  --color-sustain-timber: #DED8CF;
+  --color-sustain-sand: #E6DCCD;
+  --color-sustain-bark: #4A4A40;
+}
+
+body {
+  background-color: var(--color-sustain-bg);
+  color: var(--color-sustain-text);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.organic-blob-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.organic-blob-2 {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.organic-blob-3 {
+  border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
+}
+
+.organic-blob-4 {
+  border-radius: 40% 60% 40% 60% / 50% 30% 70% 50%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out 3s infinite;
+}
+
+.sustain-scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+.sustain-scroll-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
