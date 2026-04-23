@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" alt="Sustain Banner" width="100%">
+  
 
   # 🌿 Sustain Food Donation App
   
@@ -8,6 +8,7 @@
   [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
   [![FastAPI](https://img.shields.io/badge/FastAPI-Framework-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
   [![Supabase](https://img.shields.io/badge/Supabase-Backend-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+  [![Gemini AI](https://img.shields.io/badge/Gemini_1.5_Pro-AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-Styling-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
   <p align="center">
@@ -86,6 +87,6 @@ bun dev
 
 <div align="center">
   <p><b>© 2026 Sustain Food Donation App</b></p>
-  <p>Made with ❤️ by <b>Ajay</b> • Designed by <b>Ajay /b></p>
+  <p>Made with ❤️ by <b>Ajay</b> • Designed by <b>Ajay and Team</b></p>
   <p><i>"Ending hunger, one snapshot at a time."</i></p>
 </div>
