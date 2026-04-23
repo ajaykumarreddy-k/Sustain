@@ -87,6 +87,6 @@ bun dev
 
 <div align="center">
   <p><b>© 2026 Sustain Food Donation App</b></p>
-  <p>Made with ❤️ by <b>Ajay</b> • Designed by <b>Ajay and Team</b></p>
+  <p>Made with ❤️ by <b>Ajay</b> • Designed by <b>Ajay </b></p>
   <p><i>"Ending hunger, one snapshot at a time."</i></p>
 </div>
